@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Promociones - Nuestro Restaurante de Carnes</title>
+  <link rel="stylesheet" type="text/css" href="css/css4.css">
+</head>
+<body>
+  <header>
+    <h1>Nuestro Restaurante de Carnes</h1>
+    <nav>
+      <ul>
+        <li><a href="Carne.html">Inicio</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section id="promociones">
+    <div class="container">
+      <h2>Promociones</h2>
+      <div class="promocion">
+        <img src="imagenes/promo1.jpeg" alt="Promoción 1">
+        <h3>Promoción 1</h3>
+        <p>Bife de chorizo, baby beef, corazón de cuadril, filete de pollo * acompañado con papas fritas y ensalada.</p>
+        <button class="detalleButton">Ver más detalles</button>
+      </div>
+      <div class="promocion">
+        <img src="imagenes/promo2.jpeg" alt="Promoción 2">
+        <h3>Promoción 2</h3>
+        <p>Chorizo, morcilla, mollejas, chinchulines, chuleta de cerdo, corazón de cuadril y filete de pollo; acompañado con papas fritas y ensalada.</p>
+        <button class="detalleButton">Ver más detalles</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Ventana emergente</h2>
+      <p>Deléitate con nuestro exquisito plato principal, que combina una selección de cortes premium de carne: bife de chorizo, baby beef, corazón de cuadril y filete de pollo sazonado a la perfección. Acompañados de papas fritas doradas y crujientes, y una fresca ensalada llena de colores y sabores. Cada bocado te transportará a una experiencia gastronómica única, con carnes jugosas, acompañamientos deliciosos y una presentación cautivadora. ¡Ven y disfruta de esta combinación irresistible de sabores en nuestro restaurante!.</p>
+    </div>
+  </div>
+  <div id="myModal2" class="modal modal2">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Ventana emergente 2</h2>
+    <p>Sumérgete en una auténtica fiesta de sabores con nuestro plato principal. Disfruta de chorizo, morcilla, mollejas, chinchulines, chuleta de cerdo, corazón de cuadril y filete de pollo, acompañados de papas fritas y una refrescante ensalada. Una combinación irresistible que te transportará a la esencia de la cocina tradicional. ¡Ven y disfruta de esta experiencia gastronómica única en nuestro restaurante!.</p>
+  </div>
+</div>
+
+
+  <script>
+  var detalleButtons = document.getElementsByClassName("detalleButton");
+  var modal1 = document.getElementById("myModal");
+  var modal2 = document.getElementById("myModal2");
+
+  for (var i = 0; i < detalleButtons.length; i++) {
+    detalleButtons[i].addEventListener("click", function() {
+      var buttonIndex = Array.prototype.indexOf.call(detalleButtons, this);
+
+      if (buttonIndex === 0) {
+        modal1.style.display = "block";
+      } else if (buttonIndex === 1) {
+        modal2.style.display = "block";
+      }
+    });
+  }
+
+  document.getElementsByClassName("close")[0].addEventListener("click", function() {
+    modal1.style.display = "none";
+  });
+
+  document.getElementsByClassName("close")[1].addEventListener("click", function() {
+    modal2.style.display = "none";
+  });
+</script>
+
+</body>
+</html>

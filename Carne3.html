@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eventos - Nuestro Restaurante de Carnes</title>
+  <link rel="stylesheet" href="css/css5.css">
+</head>
+<body>
+  <header>
+    <h1>Nuestro Restaurante de Carnes</h1>
+    <nav>
+      <ul>
+        <li><a href="Carne.html">Inicio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="eventos">
+    <div class="container">
+      <h2>Eventos</h2>
+      <div class="evento">
+        <img src="imagenes/eve1.jpg" alt="Evento 1">
+        <h3>Evento 1</h3>
+        <p>Noche de degustación de cortes: ¡Descubre un mundo de sabores en nuestra noche especial de degustación de cortes de carne! Sumérgete en una experiencia culinaria única mientras pruebas una variedad de cortes exquisitos. Desde el jugoso bife de chorizo hasta el tierno corazón de cuadril, cada bocado te transportará a una experiencia gastronómica inolvidable.<p>
+        <p>Fecha: 10 de mayo, 2023</p>
+        <p>Hora: 7:00 PM</p>
+        <button class="btn-mas-info">Más información</button>
+      </div>
+      <div class="evento">
+        <img src="imagenes/eve2.jpg" alt="Evento 2">
+        <h3>Evento 2</h3>
+        <p>Evento de maridaje de vinos: ¡Déjate seducir por una combinación perfecta de vinos y carnes en nuestro evento de maridaje! Nuestros expertos han seleccionado cuidadosamente una variedad de vinos que complementarán y realzarán los sabores de nuestros exquisitos cortes de carne. Deleita tus sentidos mientras exploras la armonía entre cada sorbo y cada bocado.</p>
+        <p>Fecha: 15 de mayo, 2023</p>
+        <p>Hora: 8:00 PM</p>
+        <button class="btn-mas-info">Más información</button>
+      </div>
+    </div>
+  </section>
+<section id="eventos">
+  <div class="container">
+    <h2>Eventos premiun</h2>
+    <div class="evento">
+      <img src="imagenes/eve3.jpg" alt="Evento 3">
+      <h3>Evento 3</h3>
+      <p>Clase de cocina de asado: ¡Aprende los secretos del asado como un verdadero maestro parrillero! Únete a nuestra clase interactiva de cocina y descubre técnicas expertas para seleccionar cortes, marinar y cocinar a la perfección en la parrilla. Adquiere habilidades que impresionarán a tus amigos y familiares mientras te sumerges en el arte de la parrilla.</p>
+      <p>Fecha: 20 de mayo, 2023</p>
+      <p>Hora: 7:30 PM</p>
+      <button class="btn-mas-info">Más información</button>
+    </div>
+    <div class="evento">
+      <img src="imagenes/eve4.jpg" alt="Evento 4">
+      <h3>Evento 4</h3>
+      <p>Fiesta temática de carnes: ¡Prepárate para una fiesta gastronómica de carnes que te dejará sin aliento! Explora un festín de sabores y preparaciones únicas, desde suculentas parrilladas hasta platos ahumados y estofados llenos de sabores intensos. Sumérgete en una experiencia culinaria llena de diversidad y deleita tu paladar con una explosión de sabores.</p>
+      <p>Fecha: 25 de mayo, 2023</p>
+      <p>Hora: 8:00 PM</p>
+      <button class="btn-mas-info">Más información</button>
+    </div>
+    <div class="evento">
+      <img src="imagenes/eve5.jpg" alt="Evento 5">
+      <h3>Evento 5</h3>
+      <p>Concurso de comida: ¡Desafía tus límites en nuestro emocionante concurso de comida de carnes! ¿Crees que puedes comer más carne que nadie en un tiempo récord? Únete a la competencia y demuestra tu apetito voraz mientras te enfrentas a otros valientes comensales en una batalla épica. Un desafío divertido y lleno de emoción que pondrá a prueba tus habilidades gastronómicas. ¡Que gane el más audaz!</p>
+      <p>Fecha: 30 de mayo, 2023</p>
+      <p>Hora: 7:00 PM</p>
+      <button class="btn-mas-info">Más información</button>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <!-- Contenido del pie de página -->
+  </footer>
+  <script>
+  var detalleButtons = document.getElementsByClassName("detalleButton");
+  var masInfoButtons = document.getElementsByClassName("btn-mas-info");
+  var modal1 = document.getElementById("myModal");
+  var modal2 = document.getElementById("myModal2");
+
+  for (var i = 0; i < detalleButtons.length; i++) {
+    detalleButtons[i].addEventListener("click", function() {
+      var buttonIndex = Array.prototype.indexOf.call(detalleButtons, this);
+
+      if (buttonIndex === 0) {
+        modal1.style.display = "block";
+      } else if (buttonIndex === 1) {
+        modal2.style.display = "block";
+      }
+    });
+  }
+
+  for (var i = 0; i < masInfoButtons.length; i++) {
+    masInfoButtons[i].addEventListener("click", function() {
+      var buttonIndex = Array.prototype.indexOf.call(masInfoButtons, this);
+
+      if (buttonIndex === 0) {
+        modal1.style.display = "block";
+      } else if (buttonIndex === 1) {
+        modal2.style.display = "block";
+      }
+    });
+  }
+
+  document.getElementsByClassName("close")[0].addEventListener("click", function() {
+    modal1.style.display = "none";
+  });
+
+  document.getElementsByClassName("close")[1].addEventListener("click", function() {
+    modal2.style.display = "none";
+  });
+</script>
+
+</body>
+</html>
